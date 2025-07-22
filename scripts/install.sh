@@ -1,2 +1,3 @@
 #!/bin/bash
-yum install -y httpd
+chmod +x scripts/install.sh
+echo "Deployed via CodeDeploy!" > /var/www/html/info.txt

@@ -3,11 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.8
+      python: 3.11
+    commands:
+      - echo "Python environment ready"
+      - python3 --version
   build:
     commands:
-      - echo "Build successful!"
-
+      - echo "Static site - no build needed"
 artifacts:
   files:
     - '**/*'

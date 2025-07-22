@@ -2,13 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /tmp/web
+    destination: /var/www/html
 hooks:
   AfterInstall:
     - location: scripts/install.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: scripts/start.sh
-      timeout: 300
+      timeout: 180
       runas: root
