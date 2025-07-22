@@ -3,7 +3,13 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
+
 hooks:
+  BeforeInstall:
+    - location: scripts/clean_directory.sh
+      timeout: 30
+      runas: root
+
   AfterInstall:
     - location: scripts/restart_server.sh
       timeout: 30
