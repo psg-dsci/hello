@@ -5,6 +5,6 @@ files:
     destination: /var/www/html
 hooks:
   AfterInstall:
-    - location: scripts/install.sh
-      timeout: 180
+    - location: scripts/restart_server.sh
+      timeout: 30
       runas: root
